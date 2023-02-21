@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nápověda ke hře</title>
+</head>
+<body style="padding: 10px">
+<h1>Nápověda ke hře</h1>
+<p>
+    V této hře jste hladovým kocourem, který se snaží ukořistit lososa ze stolu obědvajících páníčků.
+    Tvým úkolem je odlákat všech 5 členů rodiny z jídelny za pomoci interakcí s různými herními předměty a postavami.
+    Jakmile je jídelna prázdná, vyskoč na jídelní stůl s lososen a vyhraješ.
+</p>
+
+<h2>Průběh hry</h2>
+
+<p>Hráč zadá příkaz a v okně se mu vypíše výsledek jeho činnosti a informace o změnách v herním světě.
+    Kocour se může pohybovat mezi jednotlivými místnostmi v domě. V místnostech naleznete věci,
+    s kterými může kocour různě interagovat. Hráč má k dispozici také omezený inventář, ve kterém
+    může přenášet <b>jednu</b> věc z místa na místo. Přenášet lze však pouze některé věci, jiné jsou pro kocoura příliš těžké.</p>
+
+<h2>Zadávání příkazů</h2>
+
+<p>
+    Příkazy se zadávají do textového pole ve formátu <b>příkaz</b><i>(mezera)</i><b>parametr</b>
+    <i>(mezera)</i><b>parametr</b>.
+</p>
+
+<pre>
+  seber míč
+</pre>
+
+<p>Příkazy je nutné zadávat v přesné podobě s malými písmeny dle vzoru ze <a href="#seznamPrikazu">seznamu příkazů</a>.</p>
+
+<h2 id="seznamPrikazu">Seznam příkazů</h2>
+<ul>
+    <li><b>nápověda</b> je příkaz bez parametrů. Vypisuje obecné informace o hře a podrobně popisuje, co dělají jednotlivé příkazy.</li>
+    <li><b>konec</b> ukončí hru.</li>
+    <li><b>jdi</b> je příkaz s právě jedním parametrem, který udává název lokace, do které se kocour pokusí přemístit. Vykoná se však pouze tehdy, pokud je zadaná lokace jedním z východů z místnosti, kde se hráč aktuálně nachází.</li>
+    <li><b>rozhlédni_se</b> je příkaz bez parametrů, který vypíše podrobné informace o místnosti a o inventáři.</li>
+    <li><b>prozkoumej</b> je příkaz s jedním parametrem, který je názvem předmětu, o kterém se, pokud se nachází v aktuální místnosti, vypíše jeho popis.</li>
+    <li><b>skoč</b> je příkaz s jedním parametrem, který udává předmět, na který se kocour pokusí skočit. Lze jej použít na vybrané předměty v herním světě. Skok zpřístupní a umožní interakci s jinými, nedosažitelnými předměty. Dále ukončí hru a hráč vítězí, pokud kocour skočí na stůl v prázdné jídelně.</li>
+    <li><b>seber</b> je příkaz s jedním parametrem, který udává název předmětu, který se odebere z aktuální lokace a přesune se do inventáře.</li>
+    <li><b>polož</b> je příkaz, který po zadání bez parametru přesune jediný předmět z inventáře do aktuální lokace. To samé udělá, pokud je v jednom parametru zadán název drženého předmětu.</li>
+    <li><b>zamňoukej</b> je příkaz s jedním parametrem, který udává název předmětu z aktuální lokace, ke kterému si kocour stoupne a začne mňoukat. To lze využít k upoutání pozornosti členů rodiny.</li>
+    <li><b>shoď</b> je příkaz s jedním parametrem, který udává název předmětu z aktuální lokace, který kocour shodí. Lze jej použít jen na pár vybraných předmětů.</li>
+    <li><b>použij</b> je příkaz s jedním parametrem, který udává název předmětu z aktuální lokace, s kterým se kocour pokusí interagovat. Lze jej použít jen na pár vybraných předmětů.</li>
+</ul>
+
+<h2>Spuštění hry</h2>
+
+<p>
+    Hra se spouští třídou START.
+</p>
+</body>
+</html>
